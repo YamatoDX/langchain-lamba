@@ -1,10 +1,18 @@
-from langchain.agents import create_agent
-from langchain.tools import tool
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
 
+load_dotenv()
 
-def main():
-    print("Hello from lamba-langchain!")
+api_key = os.getenv("OPENAI_API_KEY")
+print(f'api_key={api_key}')
+client = OpenAI(api_key=api_key)
+chat_completion = client.chat.completions.create(
+    messages=[
+        {"role":"user", "content":"Tell me a joke"}
+    ],
+    model="gpt-5-mini"
+)
 
+print(chat_completion.choices[0].message.conent)
 
-if __name__ == "__main__":
-    main()
