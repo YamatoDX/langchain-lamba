@@ -27,6 +27,9 @@ chain = chain_one | dictionary_maker_instance | chain_two
 
 user_input = input("Write a topic name in just one word:\n");
 
+if user_input in [None, ""]:
+    raise Exception("User Input cannot be empty!")
+
 response = chain.invoke({"topic":user_input})
 
 print(response)
