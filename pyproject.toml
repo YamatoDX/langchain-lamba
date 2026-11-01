@@ -13,6 +13,7 @@ dependencies = [
     "langchain-openai>=1.7.3",
     "openai>=3.41.0",
     "pydantic>=2.14.1",
+    "pypdf>=6.21.4",
     "python-dotenv>=1.2.4",
     "wikipedia>=1.4.0",
 ]
