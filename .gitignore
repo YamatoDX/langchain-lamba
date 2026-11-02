@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+pdf_documents/
+Vector/
